@@ -1,0 +1,69 @@
+.card-text{
+    width: 300px;
+}
+.card{
+    float: left;
+}
+body{
+    background-image: url("fallouttlo.png");
+    background-size: contain;
+}
+.row{
+    color: crimson;
+}
+#naglowek {
+    text-align: center;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: "Rubik Mono One";
+    color: azure;
+
+}
+.card-title{
+    font-size: 25px;
+}
+.card{
+    left: 140px;
+}
+#slider{
+    height: 60%;
+    width: 60%;
+    left: 240px;
+}
+.menu{
+    text-align: center;
+    font-size: 26px;
+    margin-top: 30px;
+    padding: 10px;
+}
+li.menu{
+    display: inline;
+}
+a{
+    text-decoration: none;
+
+}
+a:link{
+    color: azure;
+}
+a:visited{
+    color: aliceblue;
+}
+a:hover{
+    color: mediumseagreen;
+}
+nav{
+    background: olive;
+}
+.btnlogin{
+    background-color: darkseagreen;
+    font-size: 13px;
+    position: relative;
+    float:right;
+}
+.btnregister{
+    background-color: darkseagreen;
+    font-size: 13px;
+    position: relative;
+    float:right;
+}
