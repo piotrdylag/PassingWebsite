@@ -7,8 +7,9 @@ body{
     font-size: 40px;
     font-family: "Rubik Mono One";
     color: azure;
+
 }
-#loginform{
+#registerform{
     background-color: darkgreen;
     width: 400px;
     height: 300px;

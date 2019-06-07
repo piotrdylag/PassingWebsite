@@ -28,6 +28,11 @@
     <button type="button" class="btnback" onclick="location.href = 'main.html'">Powrót</button>
     </form>
 </div>
+<div class = "register">
+    <p>Nie masz konta?</p>
+    <a href="register.php">Zarejestruj się tutaj!</a>
+</div>
+
 </body>
 <?php
 if(isset($_REQUEST['attempt'])){
