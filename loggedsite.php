@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="pl">
+<lang="pl">
 <head>
     <link rel="icon" href="image/metroexodusicon.png">
+    <link rel="script" href="login.php">
     <link rel="stylesheet" href="css/style.css">
     <link rel="script" href="js/">
     <meta charset="UTF-8">
@@ -19,7 +20,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<font color="#f0f8ff">Zalogowany jako: <?php session_start(); $username = $_SESSION['login']; echo $username;?></font>
 <button type="button" class="btnlogout" onclick="location.href = 'main.html'"> Logout </button>
 <div class="container-fluid">
     <h1 id="naglowek">O "Metro"</h1>
@@ -104,7 +105,7 @@
 </div>
 <br>
 <div class="cards">
-    <div class="card" style="width:310px; height:550px">
+    <div class="card" style="width:350px; height:550px">
         <div class="card-img-top"> <img class="img-fluid" src="image/ArtyomMetroExodus.jpg"></div>
         <div class="card-body">
             <h4 class="card-title">Artyom Alekseyevich Chyornyj</h4>
@@ -115,7 +116,7 @@
         </div>
     </div>
     <div class="card" style="width:350px; height:550px">
-        <div class="card-img-top"> <img class="img-fluid" src="image/MillerMetroExodus.png"></div>
+        <div class="card-img-top"> <img class="img-fluid" src="image/mlynarz.jpg"></div>
         <div class="card-body">
             <h1 class="card-title">Sviatoslav Konstantinovich Mel'nikov</h1>
             <p class="card-text"> Były żołnierz Rosji i lider stalkerów z Zakonu Sparty.

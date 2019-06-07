@@ -78,3 +78,9 @@ nav{
     height: 30px;
     color: white;
 }
+
+.logintext{
+    color: aliceblue;
+    position: relative;
+    float: left;
+}
