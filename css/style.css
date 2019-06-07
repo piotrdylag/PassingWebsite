@@ -59,20 +59,22 @@ nav{
     background-color: darkseagreen;
     font-size: 13px;
     position: relative;
-    float:right;
+    float: right;
 }
-.btnregister{
+.btnlogout{
     background-color: darkseagreen;
     font-size: 13px;
     position: relative;
-    float:right;
+    float: right;
 }
+
 .footer{
-    position: fixed;
-    left: 0;
-    bottom: 100px;
-    width: 100%;
-    background-color: #093502;
-    color: white;
     text-align: center;
+    position: bottom;
+    bottom: 3px;
+    left: 0px;
+    right: 0;
+    clear: left;
+    height: 30px;
+    color: white;
 }

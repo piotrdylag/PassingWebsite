@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <link rel="icon" href="metroexodusicon.png">
+    <link rel="icon" href="image/metroexodusicon.png">
+    <link rel="stylesheet" href="css/loginstyle.css">
     <meta charset="UTF-8">
     <title>Zaloguj się</title>
     <link href='https://fonts.googleapis.com/css?family=Rubik Mono One' rel='stylesheet'>
@@ -16,42 +17,44 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-        body{
-            background-color: forestgreen;
-            background-size: contain;
-    }
-        #naglowek {
-            text-align: center;
-            font-weight: bold;
-            font-size: 40px;
-            font-family: "Rubik Mono One";
-            color: azure;
-
-        }
-        #loginform{
-            background-color: darkgreen;
-            width: 400px;
-            height: 300px;
-            position: center;
-            text-align: center;
-            bottom: 50px;
-        }
-
-    </style>
 </head>
 <body>
 <h1 id="naglowek">ZALOGUJ SIĘ!"</h1>
 <div class="container-fluid" id="loginform">
+    <form action="login.php?attempt" method="post" id="logging">
     <input type="text" name="login" placeholder="Nazwa użytkownika"><br><br>
-    <input type="text" name="passwd" placeholder="Hasło"><br>
+    <input type="password" name="passwd" placeholder="Hasło"><br>
     <input type="submit" name="log in" value="Log in">
-    <button type="button" class="btnback" onclick="location.href = 'main.htmlbuddy'">Powrót</button>
-
+    <button type="button" class="btnback" onclick="location.href = 'main.html'">Powrót</button>
+    </form>
 </div>
 </body>
-</html>
 <?php
+if(isset($_REQUEST['attempt'])){
+    $conn = mysqli_connect('localhost', 'dylpio', 'myazWtUPsql', 'dylpio' );
+    if (!$conn) {
+        die("Connection failed: " . mysqli_error($conn));
+    }
+    $username = $_POST['login'];
+    $passwd = $_POST['passwd'];
+
+    $query = mysqli_query($conn, "
+    SELECT login 
+    FROM loginsTB
+    WHERE login = '$username'
+    AND pass = '$passwd'") or die(mysqli_error($conn));
+
+    $total =  mysqli_num_rows($query);
+    if($total > 0){
+        session_start();
+        $_SESSION['login'] = $username;
+        $_SESSION['pass'] = $passwd;
+        header("location: loggedsite.php");
+    }
+
+    mysqli_close($conn);
+}
 
 
 ?>
+</html>
