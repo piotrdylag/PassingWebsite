@@ -19,19 +19,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1 id="naglowek">ZALOGUJ SIĘ!"</h1>
+<h1 id="naglowek">ZALOGUJ SIĘ!</h1>
 <div class="container-fluid" id="loginform">
     <form action="login.php?attempt" method="post" id="logging">
     <input type="text" name="login" placeholder="Nazwa użytkownika"><br><br>
-    <input type="password" name="passwd" placeholder="Hasło"><br>
+    <input type="password" name="passwd" placeholder="Hasło"><br><br>
     <input type="submit" name="log in" value="Log in">
     <button type="button" class="btnback" onclick="location.href = 'main.html'">Powrót</button>
     </form>
+    <div class = "register">
+        <p>Nie masz konta?</p>
+        <a href="register.php">Zarejestruj się tutaj!</a>
+    </div>
 </div>
-<div class = "register">
-    <p>Nie masz konta?</p>
-    <a href="register.php">Zarejestruj się tutaj!</a>
-</div>
+
 
 </body>
 <?php

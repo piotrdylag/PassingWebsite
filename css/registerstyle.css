@@ -1,5 +1,5 @@
 body{
-    background-image: url("fallouttlo.png");
+    background-image: url("metrotlo.jpg");
 }
 #naglowek {
     text-align: center;
@@ -16,4 +16,11 @@ body{
     position: center;
     text-align: center;
     bottom: 50px;
+}
+
+#registering{
+    text-align: center;
+    position: center;
+    padding-top: 45px ;
+
 }

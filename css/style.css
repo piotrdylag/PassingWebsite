@@ -5,7 +5,7 @@
     float: left;
 }
 body{
-    background-image: url("fallouttlo.png");
+    background-image: url("metrotlo.jpg");
     background-size: contain;
 }
 .row{
@@ -16,7 +16,7 @@ body{
     font-weight: bold;
     font-size: 60px;
     font-family: "Rubik Mono One";
-    color: azure;
+    color: black;
 
 }
 .card-title{
@@ -30,10 +30,10 @@ body{
     width: 60%;
     left: 240px;
 }
-.menu{
+.desk, .mob{
     text-align: center;
     font-size: 26px;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 10px;
 }
 li.menu{
@@ -83,4 +83,19 @@ nav{
     color: aliceblue;
     position: relative;
     float: left;
+
+}
+
+/* TODO - hamburger menu, make working for mobile*/
+nav.mob{
+    display: none;
+}
+@media screen and (max-width: 700px) {
+    nav.desk{
+        display: none;
+    }
+
+    nav.mob{
+        display: block;
+    }
 }

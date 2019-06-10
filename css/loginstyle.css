@@ -1,12 +1,12 @@
 body{
-    background-image: url("fallouttlo.png");
+    background-image: url("metrotlo.jpg");
 }
 #naglowek {
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     font-family: "Rubik Mono One";
-    color: azure;
+    color: black;
 }
 #loginform{
     background-color: darkgreen;
@@ -15,4 +15,13 @@ body{
     position: center;
     text-align: center;
     bottom: 50px;
+}
+
+#logging{
+    padding-top: 45px;
+}
+.register{
+    position: center;
+    text-align: center;
+
 }
