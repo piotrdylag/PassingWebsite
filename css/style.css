@@ -6,7 +6,6 @@
 }
 body{
     background-image: url("metrotlo.jpg");
-    background-size: contain;
 }
 .row{
     color: crimson;
@@ -86,16 +85,59 @@ nav{
 
 }
 
+p.alert{
+    color: crimson;
+    font-weight: bold;
+}
+
+.ouniwersum{
+    text-align: center;
+    position: fixed;
+}
+
+p.zalog{
+    color: aliceblue;
+}
+
 /* TODO - hamburger menu, make working for mobile*/
-nav.mob{
+nav.mob, .hambbtn{
     display: none;
 }
 @media screen and (max-width: 700px) {
     nav.desk{
         display: none;
     }
+    nav.mob,
+    .hambbtn{
+        display: block;
+    }
+.hambbtn{
+    position: relative;
+}
 
     nav.mob{
         display: block;
+    }
+    .hambbtn .fa-bars,
+    .hambbtn .fa-times{
+        position: fixed;
+        right: 25px;
+        top: 15px;
+        font-size: 35px;
+        color: #fff;
+        cursor: pointer;
+
+    }
+    .mob ul{
+        margin-top: 60px;
+        background-color: olive;
+        display:none;
+    }
+    .mob li{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+
     }
 }

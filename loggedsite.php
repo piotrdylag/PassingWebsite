@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<lang="pl">
+<html lang="pl">
 <head>
     <link rel="icon" href="image/metroexodusicon.png">
     <link rel="script" href="login.php">
@@ -20,17 +20,29 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<font color="#f0f8ff">Zalogowany jako: <?php session_start(); $username = $_SESSION['login']; echo $username;?></font>
+<p class ="zalog">Zalogowany jako <?php session_start(); $username = $_SESSION['login']; echo $username;?></p>
 <button type="button" class="btnlogout" onclick="location.href = 'main.html'"> Logout </button>
 <div class="container-fluid">
     <h1 id="naglowek">O "Metro"</h1>
 </div>
 <div class="menu">
-    <nav>
+    <nav class="desk">
         <ul>
-            <li class="menu"> <a href="#"> GŁÓWNA</a></li>
+            <li class="menu"> <a href="loggedsite.php"> GŁÓWNA</a></li>
             |
-            <li class="menu"> <a href="#"> O UNIWERSUM </a></li>
+            <li class="menu"> <a href="ouniwersumzalog.php"> O UNIWERSUM </a></li>
+            |
+            <li class="menu"><a href="#">KSIĄŻKI </a></li>
+            |
+            <li class="menu"><a href="#">GRY</a></li>
+            |
+        </ul>
+    </nav>
+    <nav class="mob">
+        <ul>
+            <li class="menu"><a href="loggedsite.php"> GŁÓWNA</a></li>
+            |
+            <li class="menu"><a href="ouniwersumzalog.php"> O UNIWERSUM </a></li>
             |
             <li class="menu"><a href="#">KSIĄŻKI </a></li>
             |
