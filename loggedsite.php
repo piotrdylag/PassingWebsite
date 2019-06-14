@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="image/metroexodusicon.png">
     <link rel="script" href="login.php">
+    <link rel="script" href="register.php">
     <link rel="stylesheet" href="css/style.css">
     <link rel="script" href="js/">
     <meta charset="UTF-8">

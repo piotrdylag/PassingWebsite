@@ -25,10 +25,37 @@
         <input type="text" name="login" placeholder="Nazwa użytkownika"><br><br>
         <input type="password" name="passwd" placeholder="Hasło"><br><br>
         <input type="email" name="email" placeholder="E-mail"><br><br>
-        <input type="submit" name="log in" value="Gotowe">
+        <input type="submit" name="register" value="Gotowe">
         <button type="button" class="btnback" onclick="location.href = 'main.html'">Powrót</button>
     </form>
 </div>
 
 </body>
+<?php
+if(isset($_REQUEST['attempt'])) {
+    $servername = "localhost";
+    $username = "dylpio";
+    $password = "myazWtUPsql";
+    $dbname = "dylpio";
+
+// Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);;
+    if (!$conn) {
+        die("Connection failed: " . mysqli_error($conn));
+    }
+    $username = $_POST['login'];
+    $password = $_POST['passwd'];
+    $email = $_POST['email'];
+
+    $sql = "INSERT INTO loginsTB (id, login, pass, email) VALUES ('','$username', '$password', '$email')";
+    if (mysqli_query($conn, $sql)=== TRUE) {
+        echo "Zostałeś pomyślnie zarejestrowany!";
+    } else {
+        echo "ERROR: " . $sql . "<br>" . $conn->error;
+    }
+    header("location: loggedsite.php");
+    mysqli_close($conn);
+}
+
+?>
 </html>
